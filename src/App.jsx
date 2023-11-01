@@ -1,10 +1,10 @@
+import { ImageGallery } from "./features/ImageGallery"
+
 function App() {
   return (
-    <>
-      <h1 className="text-3xl font-bold underline">
-        Hello
-      </h1>
-    </>
+    <main className="container max-w-7xl min-h-screen flex justify-center items-center">
+      <ImageGallery />
+    </main>
   )
 }
 
