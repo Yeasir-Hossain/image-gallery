@@ -1,4 +1,3 @@
-import { io } from "socket.io-client";
 import prepareData from "./api/prepareData";
 import prepareReq from "./api/prepareReq";
 import { apiData } from "./apiData/api";
@@ -10,13 +9,9 @@ import { apiData } from "./apiData/api";
  * @param {string} socketUrl - The URL of the socket server.
  */
 class Terminal {
-  constructor(serverUrl, socketUrl) {
+  constructor(serverUrl) {
     this.req = prepareReq(serverUrl);
     this.data = prepareData;
-    this.socket = io(socketUrl, {
-      withCredentials: true,
-      autoConnect: false,
-    });
   }
 
   /**
@@ -41,4 +36,4 @@ class Terminal {
   }
 }
 
-export const terminal = new Terminal(process.env.NEXT_PUBLIC_SERVER_URL, process.env.NEXT_PUBLIC_SOCKET_SERVER);
+export const terminal = new Terminal(import.meta.VITE_APP_SERVER_URL);

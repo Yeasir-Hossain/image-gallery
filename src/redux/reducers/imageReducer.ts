@@ -1,9 +1,8 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
-import imageData from '../../assets/imageData';
 
 // Define the type for your image data
 interface IImage {
-    id: number;
+    id: string;
     image: string;
     session?: string;
 }
@@ -15,7 +14,7 @@ interface ImageState {
 }
 
 const initialState: ImageState = {
-    images: [...imageData],
+    images: [],
     selectedImages: [],
 };
 

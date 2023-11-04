@@ -11,12 +11,15 @@ export const ImagesContainer = () => {
         images: state.imageStore.images
     }), shallowEqual)
     return (
-        <div className='grid grid-cols-4 first:row-span-2 px-6'>
+        <div className='grid sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4 px-5 py-5'>
             {
                 images.map((image, index) =>
-                    <Image key={index} img={image} />
+                    <Image key={index} img={image} index={index} />
                 )
             }
+            <div className='w-full h-full lg:w-44 lg:h-44 border-2 border-gray-200 rounded-lg'>
+                Image add
+            </div>
         </div>
     )
 }

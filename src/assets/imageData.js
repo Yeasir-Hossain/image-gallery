@@ -1,59 +1,47 @@
-import image1 from "./images/image-1.webp"
-import image2 from "./images/image-2.webp"
-import image3 from "./images/image-3.webp"
-import image4 from "./images/image-4.webp"
-import image5 from "./images/image-5.webp"
-import image6 from "./images/image-6.webp"
-import image7 from "./images/image-7.webp"
-import image8 from "./images/image-8.webp"
-import image9 from "./images/image-9.webp"
-import image10 from "./images/image-10.jpeg"
-import image11 from "./images/image-11.jpeg"
-
-// this is the first data that will be loaded into the gallery
+// this is the default data of mongoDB incase something goes wrong
 export default [
     {
-        id: 1,
-        image: image1
+        "id": "654625c67632df04a5fdf1e3",
+        "path": "https://res.cloudinary.com/dlocipt7z/image/upload/v1699096080/zehv3hqi9bdsvjhfajtn.webp"
     },
     {
-        id: 2,
-        image: image2
+        "id": "654625d07632df04a5fdf1e5",
+        "path": "https://res.cloudinary.com/dlocipt7z/image/upload/v1699096090/jn1mpz6ciooyo7uktoth.webp"
     },
     {
-        id: 3,
-        image: image3
+        "id": "654625da7632df04a5fdf1e7",
+        "path": "https://res.cloudinary.com/dlocipt7z/image/upload/v1699096100/okeovo7e17nrzpzqcpjd.webp"
     },
     {
-        id: 4,
-        image: image4
+        "id": "654625e17632df04a5fdf1e9",
+        "path": "https://res.cloudinary.com/dlocipt7z/image/upload/v1699096108/thhghpcezusgfrlabnvz.webp"
     },
     {
-        id: 5,
-        image: image5
+        "id": "654625ea7632df04a5fdf1eb",
+        "path": "https://res.cloudinary.com/dlocipt7z/image/upload/v1699096116/sxjm8bfnqlaxag67zwzi.webp"
     },
     {
-        id: 6,
-        image: image6
+        "id": "654625f17632df04a5fdf1ed",
+        "path": "https://res.cloudinary.com/dlocipt7z/image/upload/v1699096123/llvsqgdqtqntiiwrxpsj.webp"
     },
     {
-        id: 7,
-        image: image7
+        "id": "654625f97632df04a5fdf1ef",
+        "path": "https://res.cloudinary.com/dlocipt7z/image/upload/v1699096131/qslib1x8yrab0t7lf1ch.webp"
     },
     {
-        id: 8,
-        image: image8
+        "id": "654626027632df04a5fdf1f1",
+        "path": "https://res.cloudinary.com/dlocipt7z/image/upload/v1699096140/fvjejsi23cakxvgauv66.webp"
     },
     {
-        id: 9,
-        image: image9
+        "id": "654626117632df04a5fdf1f3",
+        "path": "https://res.cloudinary.com/dlocipt7z/image/upload/v1699096155/enqp9eezfypvmcptecu3.webp"
     },
     {
-        id: 10,
-        image: image10
+        "id": "6546261a7632df04a5fdf1f5",
+        "path": "https://res.cloudinary.com/dlocipt7z/image/upload/v1699096163/maph52u6zkkmjrdhdps4.jpg"
     },
     {
-        id: 11,
-        image: image11
-    },
+        "id": "654626227632df04a5fdf1f7",
+        "path": "https://res.cloudinary.com/dlocipt7z/image/upload/v1699096172/ibad2agjx5aabxiczmrj.jpg"
+    }
 ]
