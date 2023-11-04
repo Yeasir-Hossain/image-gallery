@@ -36,4 +36,4 @@ class Terminal {
   }
 }
 
-export const terminal = new Terminal(import.meta.VITE_APP_SERVER_URL);
+export const terminal = new Terminal(import.meta.env.VITE_APP_SERVER_URL);

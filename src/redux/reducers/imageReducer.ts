@@ -28,6 +28,12 @@ const imageSlice = createSlice({
         addNewImage: (state, action: PayloadAction<IImage>) => {
             state.images = [action.payload, ...state.images];
         },
+        selectImage: (state, action: PayloadAction<IImage>) => {
+            state.selectedImages = [action.payload, ...state.selectedImages];
+        },
+        removeSelectedImage: (state, action: PayloadAction<IImage>) => {
+            state.selectedImages = state.selectedImages.filter((image) => image.id !== action.payload.id);
+        },
         updateImageList: (state, action: PayloadAction<Partial<IImage>>) => {
             // Define how you want to update the image list
             // For example: state.images = state.images.map(image => image.id === action.payload.id ? { ...image, ...action.payload } : image);
@@ -43,5 +49,7 @@ export const {
     addNewImage,
     updateImageList,
     removeImage,
+    selectImage,
+    removeSelectedImage
 } = imageSlice.actions;
 export default imageSlice.reducer;

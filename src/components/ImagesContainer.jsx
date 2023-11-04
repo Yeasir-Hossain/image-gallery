@@ -13,8 +13,8 @@ export const ImagesContainer = () => {
     return (
         <div className='grid sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4 px-5 py-5'>
             {
-                images.map((image, index) =>
-                    <Image key={index} img={image} index={index} />
+                images.map((image) =>
+                    <Image key={image.id} image={image} />
                 )
             }
             <div className='w-full h-full lg:w-44 lg:h-44 border-2 border-gray-200 rounded-lg'>

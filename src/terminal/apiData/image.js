@@ -1,4 +1,4 @@
-export const user = {
+export const image = {
     uploadImage: {
         method: 'POST',
         formData: true,

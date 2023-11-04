@@ -32,8 +32,8 @@ export const Actions = () => {
     return (
         <div className='w-full flex justify-between items-center border-gray-200 border-b-2 px-5 pb-2'>
             <div>
-                <input type="checkbox" name="selected" onChange={(e) => handleCheckAll(e)} checked={selectedImages.length > 0} />
-                <label htmlFor="selected" className='font-semibold ml-2 '>{selectedImages.length} Files Selected</label>
+                <input type="checkbox" name="selected" id='selected' onChange={(e) => handleCheckAll(e)} checked={selectedImages.length > 0} />
+                <label htmlFor="selected" className='font-semibold ml-2 cursor-pointer'>{selectedImages.length} Files Selected</label>
             </div>
             <button onClick={handleDelete} className='text-red-600 px-1'>
                 Delete Files
