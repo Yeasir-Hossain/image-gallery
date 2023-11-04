@@ -4,12 +4,14 @@ import { ImagesContainer } from '../components/ImagesContainer';
 import { useDispatch } from 'react-redux';
 import { terminal } from '../terminal/Terminal';
 import { setValue } from '../redux/reducers/imageReducer';
+import nProgress from 'nprogress';
 
 export const ImageGallery = () => {
     const dispatch = useDispatch();
 
     //initial load of user and the images from backend
     useEffect(() => {
+        nProgress.start();
         terminal.request({ name: 'registerUser' }).then((res) => {
             // user session is successfull then load the images
             if (res.status === 200) {
@@ -19,7 +21,7 @@ export const ImageGallery = () => {
                     }
                 }).catch((err) => console.log(err));
             }
-        }).catch((err) => console.log(err));
+        }).catch((err) => console.log(err)).finally(() => nProgress.done());
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
 
