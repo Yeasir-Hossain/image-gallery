@@ -1,6 +1,6 @@
 /* eslint-disable react/prop-types */
-import React, { useEffect, useState } from 'react'
-import { shallowEqual, useDispatch, useSelector } from 'react-redux'
+import React, { useEffect, useState } from 'react';
+import { shallowEqual, useDispatch, useSelector } from 'react-redux';
 import { removeSelectedImage, selectImage } from '../redux/reducers/imageReducer';
 
 /**
@@ -9,15 +9,15 @@ import { removeSelectedImage, selectImage } from '../redux/reducers/imageReducer
  */
 export const Image = ({ image }) => {
     const dispatch = useDispatch();
-    const [checked, setChecked] = useState(false)
+    const [checked, setChecked] = useState(false);
     const { selectedImages } = useSelector((state) => ({
         selectedImages: state.imageStore.selectedImages
-    }), shallowEqual)
+    }), shallowEqual);
 
     //set the checkbox true if the image is selected
     useEffect(() => {
         setChecked(selectedImages.find(i => i.id === image.id) ? true : false);
-    }, [selectedImages, image.id])
+    }, [selectedImages, image.id]);
 
     return (
         <div className='relative group first:row-span-2 first:col-span-2 first:w-full first:h-full lg:w-44 lg:h-44 border-2 border-gray-200 rounded-lg'>
@@ -34,5 +34,5 @@ export const Image = ({ image }) => {
                 <img src={image?.path} className='relative w-full h-full' />
             </label>
         </div>
-    )
-}
+    );
+};

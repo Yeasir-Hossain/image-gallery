@@ -11,7 +11,7 @@ export default function prepareReq(serverUrl) {
 		 *
 		 * @returns {Promise} A promise that resolves with the response data if the request is successful, or rejects with an error if the request fails.
 		 */
-	// eslint-disable-next-line no-unused-vars
+	 
 	return async ({ method = 'GET', uri, body = '{}', type, ...rest }) => {
 		try {
 			let url = uri.startsWith('https://') ? uri : `${serverUrl || 'http://localhost:4000/api'}/${uri}`;

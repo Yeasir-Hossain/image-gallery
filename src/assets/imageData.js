@@ -44,4 +44,4 @@ export default [
         "id": "654626227632df04a5fdf1f7",
         "path": "https://res.cloudinary.com/dlocipt7z/image/upload/v1699096172/ibad2agjx5aabxiczmrj.jpg"
     }
-]
+];

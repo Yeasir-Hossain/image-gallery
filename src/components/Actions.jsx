@@ -1,6 +1,6 @@
-import React from 'react'
-import { shallowEqual, useDispatch, useSelector } from "react-redux"
-import hitToast from '../utils/hitToast'
+import React from 'react';
+import { shallowEqual, useDispatch, useSelector } from "react-redux";
+import hitToast from '../utils/hitToast';
 import { setValue } from '../redux/reducers/imageReducer';
 
 
@@ -21,12 +21,12 @@ export const Actions = () => {
     const handleCheckAll = (e) => {
         e.target.checked ?
             dispatch(setValue({ target: 'selectedImages', value: images })) :
-            dispatch(setValue({ target: 'selectedImages', value: [] }))
-    }
+            dispatch(setValue({ target: 'selectedImages', value: [] }));
+    };
 
     // This funtion  is used to delete the selected images
     const handleDelete = () => {
-        hitToast('Deleted', 'success')
+        hitToast('Deleted', 'success');
     };
 
     return (
@@ -39,5 +39,5 @@ export const Actions = () => {
                 Delete Files
             </button>
         </div>
-    )
-}
+    );
+};

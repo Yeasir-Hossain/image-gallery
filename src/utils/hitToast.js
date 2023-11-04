@@ -1,4 +1,4 @@
-import { enqueueSnackbar } from 'notistack'
+import { enqueueSnackbar } from 'notistack';
 /**
  * Display a toast notification with the specified message and variant.
  *
