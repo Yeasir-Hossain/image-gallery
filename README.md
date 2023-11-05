@@ -40,12 +40,11 @@ If an error occurs during the API request, the "request" method will throw an er
 - [nprogress](https://www.npmjs.com/package/nprogress) (provides a progress bar during loading)
 - [react-icons](https://www.npmjs.com/package/react-icons)
 - [react-redux](https://www.npmjs.com/package/react-redux)
+- [dndkit](https://docs.dndkit.com/introduction/installation)
 
 ## Challenges
 - The primary challenge was implementing drag and drop functionality. Existing packages mainly support column or list-based drag and drop, not grid structures.
 - Implementing a placeholder box during drag and drop with item rearrangement posed further challenges.
 
 ## Solutions
-- Implemented basic drag and drop using raw HTML to meet the initial functionality requirements.
-- Implemented a placeholder box but faced difficulties in implementing sorting during dragging due to grid re-rendering.
-- Tried using the react dnd-kit package but could not implement correctly. Got everything from the docs but the drag events were not being triggered.
+- Implemented drag and drop feature using react dnd kit package.
