@@ -13,6 +13,7 @@
 - Users can upload one image at a time.
 - Users can permanently delete the images they uploaded.
 - An API request class named "Terminal" is provided for simplifying API requests.
+- Re-arrange items by drag and drop
 
 ## API Wrapper
 
