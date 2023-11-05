@@ -38,16 +38,13 @@ export const Image = ({ image, index }) => {
         const dragIndex = e.dataTransfer.getData('text/plain');
         const dropIndex = index;
         if (dropIndex !== dragIndex) {
-            setHovered(true);
             dropIndexRef.current = dropIndex;
         }
     };
 
     // This function is used to handle drag leave after the dragging is over
     const handleDragLeave = () => {
-        setHovered(false);
         dropIndexRef.current = null;
-
     };
 
     // This function is used to rearrange the items after the drop event
@@ -60,8 +57,6 @@ export const Image = ({ image, index }) => {
             updatedItems.splice(dragIndex, 1);
             updatedItems.splice(dropIndex, 0, dragItem);
             dispatch(setValue({ target: 'images', value: updatedItems }));
-            setHovered(false);
-            dropIndexRef.current = dropIndex;
         };
     };
 
@@ -75,23 +70,18 @@ export const Image = ({ image, index }) => {
                 onDragLeave={handleDragLeave}
                 onDrop={handleDragAndDrop}
             >
-                {hovered ?
-                    <EmptyImage /> :
-                    <>
-                        <input
-                            onChange={() => checked ? dispatch(removeSelectedImage(image)) : dispatch(selectImage(image))}
-                            type="checkbox"
-                            name={`${image.id}`}
-                            id={`${image.id}`}
-                            checked={checked}
-                            className={`absolute z-50 top-[20px] left-[20px] w-5 h-5 ${checked ? 'opacity-100' : 'opacity-0 group-hover:opacity-100'} transition-opacity duration-500 ease-in-out`}
-                        />
-                        <label htmlFor={`${image.id}`}>
-                            <div className={`absolute w-full h-full z-20 top-0 left-0 opacity-40 group-hover:backdrop-blur-sm ${checked ? 'bg-white' : 'bg-transparent'} group-hover:bg-black transition-all duration-500 ease-in-out`}></div>
-                            <img src={image?.path} className="relative w-full h-full" />
-                        </label>
-                    </>
-                }
+                <input
+                    onChange={() => checked ? dispatch(removeSelectedImage(image)) : dispatch(selectImage(image))}
+                    type="checkbox"
+                    name={`${image.id}`}
+                    id={`${image.id}`}
+                    checked={checked}
+                    className={`absolute z-50 top-[20px] left-[20px] w-5 h-5 ${checked ? 'opacity-100' : 'opacity-0 group-hover:opacity-100'} transition-opacity duration-500 ease-in-out`}
+                />
+                <label htmlFor={`${image.id}`}>
+                    <div className={`absolute w-full h-full z-20 top-0 left-0 opacity-40 group-hover:backdrop-blur-sm ${checked ? 'bg-white' : 'bg-transparent'} group-hover:bg-black transition-all duration-500 ease-in-out`}></div>
+                    <img src={image?.path} className="relative w-full h-full" />
+                </label>
             </div>
         </>
     );
