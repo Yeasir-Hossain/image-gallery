@@ -10,6 +10,8 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@dnd-kit/core": "^6.0.8",
+    "@dnd-kit/sortable": "^7.0.2",
     "@reduxjs/toolkit": "^1.9.7",
     "@types/jest": "^29.5.7",
     "@types/node": "^20.8.10",
