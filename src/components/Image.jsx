@@ -45,15 +45,16 @@ export const Image = ({ image, index }) => {
     const handleDragAndDrop = (e) => {
         const dragIndex = e.dataTransfer.getData('text/plain');
         const dropIndex = index;
-        const updatedItems = [...images];
-        const dragItem = updatedItems[dragIndex];
-        updatedItems.splice(dragIndex, 1);
-        updatedItems.splice(dropIndex, 0, dragItem);
-        dispatch(setValue({ target: 'images', value: updatedItems }));
-        setHovered(false);
-        dropIndexRef.current = dropIndex;
+        if (dropIndex !== dragIndex) {
+            const updatedItems = [...images];
+            const dragItem = updatedItems[dragIndex];
+            updatedItems.splice(dragIndex, 1);
+            updatedItems.splice(dropIndex, 0, dragItem);
+            dispatch(setValue({ target: 'images', value: updatedItems }));
+            setHovered(false);
+            dropIndexRef.current = dropIndex;
+        };
     };
-
 
     return (
         <>

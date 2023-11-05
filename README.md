@@ -16,22 +16,22 @@
 
 ## API SDK
 
-### Terminal Class
+#### Terminal Class
 The "Terminal" class is part of the API SDK and simplifies making API requests to the backend server. It facilitates interaction with the API and offers a clean interface for sending HTTP requests.
 
-### Creating an Instance
+#### Creating an Instance
 Create an instance of the "Terminal" class by providing the API server URL as a string to its constructor.
 
-### Making API Requests
+#### Making API Requests
 The "Terminal" class provides a "request" method for making API requests. You can specify the request type, API name, query parameters, path parameters, and request body. The method returns the API response.
 
-### API Request Options
+#### API Request Options
 - "name" (string): The name of the API to be called.
 - "queries" (object): Query string parameters for the request.
 - "params" (object): URL path parameters for the request.
 - "body" (object): The request body.
 
-### Error Handling
+#### Error Handling
 If an error occurs during the API request, the "request" method will throw an error that can be caught and handled using "try...catch" or ".catch()".
 
 ## Packages
@@ -48,3 +48,4 @@ If an error occurs during the API request, the "request" method will throw an er
 ## Solutions
 - Implemented basic drag and drop using raw HTML to meet the initial functionality requirements.
 - Implemented a placeholder box but faced difficulties in implementing sorting during dragging due to grid re-rendering.
+- Tried using the react dnd-kit package but could not implement correctly. Got everything from the docs but the drag events were not being triggered.
