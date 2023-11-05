@@ -14,10 +14,10 @@
 - Users can permanently delete the images they uploaded.
 - An API request class named "Terminal" is provided for simplifying API requests.
 
-## API SDK
+## API Wrapper
 
 #### Terminal Class
-The "Terminal" class is part of the API SDK and simplifies making API requests to the backend server. It facilitates interaction with the API and offers a clean interface for sending HTTP requests.
+The "Terminal" class is part of the API wrapper and simplifies making API requests to the backend server. It facilitates interaction with the API and offers a clean interface for sending HTTP requests.
 
 #### Creating an Instance
 Create an instance of the "Terminal" class by providing the API server URL as a string to its constructor.
