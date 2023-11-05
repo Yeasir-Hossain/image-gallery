@@ -4,6 +4,13 @@ import { shallowEqual, useDispatch, useSelector } from 'react-redux';
 import { removeSelectedImage, selectImage, setValue } from '../redux/reducers/imageReducer';
 import { EmptyImage } from './EmptyImage';
 
+
+/**
+ * This component renders a single image
+ * @param {Object} image - The image object from the backend.
+ * @param {Integer} index - The index of the image object.
+ * @returns react component
+ */
 export const Image = ({ image, index }) => {
     const dispatch = useDispatch();
     const [checked, setChecked] = useState(false);
@@ -19,12 +26,13 @@ export const Image = ({ image, index }) => {
         setChecked(selectedImages.find(i => i.id === image.id) ? true : false);
     }, [selectedImages, image.id]);
 
-    // handledragstart
+    // This function is used to handle drag start event
     const handleDragStart = (e) => {
         const dragIndex = index;
         e.dataTransfer.setData('text/plain', dragIndex);
     };
 
+    // This function is used to handle drag over an element event
     const handleDragOver = (e) => {
         e.preventDefault();
         const dragIndex = e.dataTransfer.getData('text/plain');
@@ -35,6 +43,7 @@ export const Image = ({ image, index }) => {
         }
     };
 
+    // This function is used to handle drag leave after the dragging is over
     const handleDragLeave = () => {
         setHovered(false);
         dropIndexRef.current = null;

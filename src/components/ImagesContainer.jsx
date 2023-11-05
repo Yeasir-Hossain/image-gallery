@@ -4,7 +4,7 @@ import { ImageUploader } from './ImageUploader';
 import { Image } from './Image';
 
 /**
- * This component renders the image
+ * This component renders the images from backend
  * @returns react component
  */
 export const ImagesContainer = ({ }) => {
