@@ -48,3 +48,6 @@ If an error occurs during the API request, the "request" method will throw an er
 
 ## Solutions
 - Implemented drag and drop feature using react dnd kit package.
+
+
+## N.B: As the project is hosted on render it may take some time to load. According to the community posts it may take upto 1 minute. If it does so please refresh the page then it will work properly. Thanks in advance.
